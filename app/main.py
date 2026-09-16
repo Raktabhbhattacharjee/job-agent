@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from app.routers.analysis import router as analysis_router
 from app.routers.resume import router as resume_router
 
 app = FastAPI(
@@ -7,8 +8,9 @@ app = FastAPI(
     version="0.1.0",
 )
 
-# hook up the resume upload router
+# hook up routers
 app.include_router(resume_router)
+app.include_router(analysis_router)
 
 
 @app.get("/")
