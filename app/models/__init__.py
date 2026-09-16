@@ -3,3 +3,4 @@
 # from app.models.user import User  # noqa: F401
 from app.models.resume import Resume
 from app.models.resume_analysis import ResumeAnalysis
+from app.models.job import Job
